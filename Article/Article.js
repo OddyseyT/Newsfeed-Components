@@ -101,9 +101,58 @@ const data = [
 
   Hint: You will need to use createElement more than once here!
 
-  Your function should take either an object as its one argument, or 5 separate arguments mapping to each piece of the data object above.
+  Your function should take either an object as its one argument, or 5 separate arguments mapping to each piece of the data object above. */
 
-  Step 2: Add an event listener to the expandButton span. This listener should toggle the class 'article-open' on the 'article' div.
+  const articleMaker = (title, date, firstParagraph, secondParagraph, thirdParagraph) => {
+    const article = document.createElement ('div');
+    const articleTitle = document.createElement('div');
+    const articleDate = document.createElement('div');
+    const articleContent = document.createElement('div');
+    const expandButton = document.createElement('button');
+    const firstPgph = document.createElement('p');
+    const secondPgph = document.createElement('p');
+    const thirdPgph = document.createElement('p');
+
+    article.appendChild(articleTitle);
+    article.appendChild(articleDate);
+    article.appendChild(articleContent);
+    article.appendChild(expandButton);
+
+    articleContent.appendChild(firstPgph);
+    articleContent.appendChild(secondPgph);
+    articleContent.appendChild(thirdPgph);
+    
+
+    articleTitle.textcontent = title;
+    articleDate.textcontent = date;
+    firstPgph.textcontent = firstParagraph;
+    secondPgph.textcontent = secondParagraph;
+    thirdPgph.textcontent = thirdParagraph;
+    expandButton.addEventListener('click', () => {
+      article.classList.toggle('article-open')
+    });
+    
+    article.classList.add ( 'article');articleTitle.classList.add('article', 'h2');
+    articleDate.classList.add('article', 'date');
+    
+   firstPgph.classList.add('firstParagraph');
+    secondPgph.classList.add('secondParagraph')
+    thirdPgph.classList.add('thirdParagraph')
+    
+    return article;
+
+  };
+
+  const articleTest = articleMaker("Test Title", 'test date', 'test paragraph', "test paragraph", 'test paragraph');
+
+
+
+  const articles = document.querySelector('.articles');
+
+  articles.appendChild(articleTest);
+
+  data.forEach(i => {articles.appendChild(articleMaker(i.title, i.date, i.firstParagraph, i.secondParagraph, i.thirdParagraph))});
+  /* Step 2: Add an event listener to the expandButton span. This listener should toggle the class 'article-open' on the 'article' div.
 
   Step 3: Don't forget to return something from your function!
 
