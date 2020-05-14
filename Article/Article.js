@@ -85,7 +85,15 @@ const data = [
     thirdParagraph: `Hodor hodor - hodor... Hodor hodor hodor hodor. Hodor. Hodor! Hodor hodor, hodor hodor hodor hodor hodor; hodor hodor? Hodor!
           Hodor hodor, HODOR hodor, hodor hodor?! Hodor! Hodor hodor, HODOR hodor, hodor hodor, hodor, hodor hodor. Hodor, hodor.
           Hodor. Hodor, hodor, hodor. Hodor hodor... Hodor hodor hodor?! Hodor, hodor... Hodor hodor HODOR hodor, hodor hodor. Hodor.`
-  }
+          
+  },
+{
+  title: 'Lambda/Hogwarts Merger',
+  date: 'May 13, 2020',
+  firstParagraph: 'All students must report to the dining hall to go through the sorting hat ritual',
+  secondParagraph: 'Harry Potter graduated both programs with flying colors.  Hermoine Grainger was hired on at Twitter writing code under a psuedonym',
+  thirdParagraph: 'Muggles muggles muggles.....  Puggles puggles puggles'
+}
 ];
 
 /* Step 1: Write a component called 'articleMaker' to create an article. You want your component to return markup like the template below: 
