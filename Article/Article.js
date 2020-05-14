@@ -122,36 +122,39 @@ const data = [
     
     
 
-    articleTitle.textcontent = title;
-    articleDate.textcontent = date;
-    firstPgph.textcontent = Paragraph1;
-    secondPgph.textcontent = Paragraph2;
-    thirdPgph.textcontent = Paragraph3;
+    articleTitle.textContent = title;
+    articleDate.textContent = date;
+    firstPgph.textContent = Paragraph1;
+    secondPgph.textContent = Paragraph2;
+    thirdPgph.textContent = Paragraph3;
+    exButton.textContent = "\u25bc";
     exButton.addEventListener('click', () => {
       article.classList.toggle('article-open')
     });
+
     
     article.classList.add ( 'article');
     articleDate.classList.add( 'date');
+    exButton.classList.add( 'expandButton');
     
-   firstPgph.classList.add('article-open');
+   /*firstPgph.classList.add('article-open');
     secondPgph.classList.add('article-open');
-    thirdPgph.classList.add('article-open');
-    exButton.classList.add('expandButton')
+    thirdPgph.classList.add('article-open');*/
+    
     
     return article;
 
   };
 
-  const articleTest = articleMaker("Test Title", 'test date', 'test paragraph', "test paragraph", 'test paragraph');
+  /*const articleTest = articleMaker("Test Title", 'test date', 'test paragraph', "test paragraph", 'test paragraph');*/
 
 
 
   const articles = document.querySelector('.articles');
 
-  article.appendChild(articleTest);
+  /*articles.appendChild(articleTest);*/
 
-  /* data.forEach(i => {articles.appendChild(articleMaker(i.title, i.date, i.firstParagraph, i.secondParagraph, i.thirdParagraph))});
+   data.forEach(i => {articles.appendChild(articleMaker(i.title, i.date, i.firstParagraph, i.secondParagraph, i.thirdParagraph))});
   /* Step 2: Add an event listener to the expandButton span. This listener should toggle the class 'article-open' on the 'article' div.
 
   Step 3: Don't forget to return something from your function!
