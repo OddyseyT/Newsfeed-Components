@@ -161,7 +161,7 @@ const data = [
   const articles = document.querySelector('.articles');
 
   /*articles.appendChild(articleTest);*/
-
+ 
    data.forEach(i => {articles.appendChild(articleMaker(i.title, i.date, i.firstParagraph, i.secondParagraph, i.thirdParagraph))});
   /* Step 2: Add an event listener to the expandButton span. This listener should toggle the class 'article-open' on the 'article' div.
 
